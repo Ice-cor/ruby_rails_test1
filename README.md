@@ -7,6 +7,9 @@
 // 系统命令行输入以下代码启动数据库
 docker start db-for-mangosteen
 
+// 创建测试环境的数据库
+ RAILS_ENV=test bin/rails db:create
+
 // 创建表
 bin/rails db:migrate
 
