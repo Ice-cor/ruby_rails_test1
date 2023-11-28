@@ -1,12 +1,12 @@
 class Api::V1::ItemsController < ApplicationController
-  def index
-    items = Item.page(:page)
+  def show
+    items = Item.page(params[:page]).per(params[:per_page])
     render json: {
-      resource: items,
-      page_info: {
-        page:,
-        per_page:10,
-        total: items.count
+      resources: items,
+      pager: {
+        page: params[:page],
+        per_page: params[:per_page],
+        count: Item.count
       }
     }
   end
