@@ -10,6 +10,9 @@ docker start db-for-mangosteen
 // 创建表
 bin/rails db:migrate
 
+// 创建model
+bin/rails g model item user_id:integer amount:integer notes:text tags_id:integer happened_at:datetime
+
 // 回滚表
 bin/rails db:rollback
 
