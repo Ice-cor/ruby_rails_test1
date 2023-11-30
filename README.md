@@ -26,4 +26,9 @@ bin/rails g controller home index // 创建home下
 ### rails 代码,
 // 进入测试模式，可以跑代码
 bin/rails console
+
+// 生成 key, 密码编辑在临时文件内写好
+EDITOR="code --wait" bin/rails credentials:edit
+// master.key不能上传到git
+
 ```
