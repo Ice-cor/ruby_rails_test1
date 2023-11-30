@@ -21,5 +21,9 @@ bin/rails db:rollback
 
 // 创建controller
 bin/rails g controller validation_codes
+bin/rails g controller home index // 创建home下
 
+### rails 代码,
+// 进入测试模式，可以跑代码
+bin/rails console
 ```
